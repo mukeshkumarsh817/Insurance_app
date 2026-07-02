@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import com.insurance.claim_service.dto.ClaimRequestDTO;
@@ -17,6 +19,9 @@ import com.insurance.claim_service.service.ClaimService;
 @Service
 public class ClaimServiceImpl implements ClaimService {
 
+    private static final Logger logger =
+            LoggerFactory.getLogger(ClaimServiceImpl.class);
+
     private final ClaimRepository claimRepository;
     private final ModelMapper modelMapper;
 
@@ -29,6 +34,8 @@ public class ClaimServiceImpl implements ClaimService {
     @Override
     public ClaimResponseDTO addClaim(ClaimRequestDTO request) {
 
+        logger.info("Creating new claim with claim number: {}", request.getClaimNumber());
+
         if (claimRepository.existsByClaimNumber(request.getClaimNumber())) {
             throw new DuplicateClaimException("Claim Number already exists");
         }
@@ -37,11 +44,15 @@ public class ClaimServiceImpl implements ClaimService {
 
         Claim savedClaim = claimRepository.save(claim);
 
+        logger.info("Claim created successfully with ID: {}", savedClaim.getClaimId());
+
         return modelMapper.map(savedClaim, ClaimResponseDTO.class);
     }
 
     @Override
     public List<ClaimResponseDTO> getAllClaims() {
+
+        logger.info("Fetching all claims");
 
         return claimRepository.findAll()
                 .stream()
@@ -51,6 +62,8 @@ public class ClaimServiceImpl implements ClaimService {
 
     @Override
     public ClaimResponseDTO getClaimById(Long claimId) {
+
+        logger.info("Fetching claim with ID: {}", claimId);
 
         Claim claim = claimRepository.findById(claimId)
                 .orElseThrow(() ->
@@ -62,6 +75,8 @@ public class ClaimServiceImpl implements ClaimService {
     @Override
     public ClaimResponseDTO updateClaim(Long claimId,
                                         ClaimRequestDTO request) {
+
+        logger.info("Updating claim with ID: {}", claimId);
 
         Claim claim = claimRepository.findById(claimId)
                 .orElseThrow(() ->
@@ -76,16 +91,22 @@ public class ClaimServiceImpl implements ClaimService {
 
         Claim updatedClaim = claimRepository.save(claim);
 
+        logger.info("Claim updated successfully with ID: {}", updatedClaim.getClaimId());
+
         return modelMapper.map(updatedClaim, ClaimResponseDTO.class);
     }
 
     @Override
     public void deleteClaim(Long claimId) {
 
+        logger.info("Deleting claim with ID: {}", claimId);
+
         Claim claim = claimRepository.findById(claimId)
                 .orElseThrow(() ->
                         new ClaimNotFoundException("Claim not found with id : " + claimId));
 
         claimRepository.delete(claim);
+
+        logger.info("Claim deleted successfully with ID: {}", claimId);
     }
 }
