@@ -24,4 +24,6 @@ public class ClaimRequestDTO {
 
     @NotBlank(message = "Claim Status is required")
     private String claimStatus;
+
+    //private String claimDate; // Optional field, can be null
 }

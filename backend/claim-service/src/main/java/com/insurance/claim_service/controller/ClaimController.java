@@ -35,7 +35,7 @@ public class ClaimController {
     // Get All Claims
     @GetMapping
     public ResponseEntity<List<ClaimResponseDTO>> getAllClaims() {
-
+        //System.out.println("Hello Mukesh");
         return ResponseEntity.ok(claimService.getAllClaims());
     }
 

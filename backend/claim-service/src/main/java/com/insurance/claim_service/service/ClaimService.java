@@ -22,4 +22,6 @@ public interface ClaimService {
 
     // Delete Claim
     void deleteClaim(Long claimId);
+
+    //void deleteAllClaims();
 }

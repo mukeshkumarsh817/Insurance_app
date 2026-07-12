@@ -43,6 +43,7 @@ public class ClaimServiceImpl implements ClaimService {
         Claim claim = modelMapper.map(request, Claim.class);
 
         Claim savedClaim = claimRepository.save(claim);
+        //System.out.println("Hi Mukesh");
 
         logger.info("Claim created successfully with ID: {}", savedClaim.getClaimId());
 
