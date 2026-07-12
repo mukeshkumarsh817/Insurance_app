@@ -27,6 +27,7 @@ public class ClaimController {
     public ResponseEntity<ClaimResponseDTO> addClaim(
             @Valid @RequestBody ClaimRequestDTO request) {
         //System.out.println("Hello World");
+        //System.out.println("Hello World");
         ClaimResponseDTO response = claimService.addClaim(request);
 
         return new ResponseEntity<>(response, HttpStatus.CREATED);
