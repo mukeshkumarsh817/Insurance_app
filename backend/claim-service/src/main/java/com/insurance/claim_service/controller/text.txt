@@ -1,0 +1,351 @@
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (main)
+$ git branch feature/needToBeRemoved-33
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (main)
+$ git checkout feature/needToBeRemoved-33
+D       backend/Hello/Hello.Java
+Switched to branch 'feature/needToBeRemoved-33'
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (feature/needToBeRemoved-33)
+$ git checkout feature/ClaimNeedToBeRemoved
+error: pathspec 'feature/ClaimNeedToBeRemoved' did not match any file(s) known to git
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (feature/needToBeRemoved-33)
+$ git fetch
+From https://github.com/mukeshkumarsh817/Insurance_app
+ * [new branch]      feature/ClaimsNeedToBeRemoved-33 -> origin/feature/ClaimsNeedToBeRemoved-33
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (feature/needToBeRemoved-33)
+$ git checkout feature/ClaimNeedToBeRemoved
+error: pathspec 'feature/ClaimNeedToBeRemoved' did not match any file(s) known to git
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (feature/needToBeRemoved-33)
+$ git checkout feature/ClaimsNeedToBeRemoved
+error: pathspec 'feature/ClaimsNeedToBeRemoved' did not match any file(s) known to git
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (feature/needToBeRemoved-33)
+$ ^C
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (feature/needToBeRemoved-33)
+$ git checkout feature/ClaimNeedToBeRemoved
+error: pathspec 'feature/ClaimNeedToBeRemoved' did not match any file(s) known to git
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (feature/needToBeRemoved-33)
+$ git checkout feature/ClaimNeedToBeRemoved-33
+error: pathspec 'feature/ClaimNeedToBeRemoved-33' did not match any file(s) known to git
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (feature/needToBeRemoved-33)
+$ git checkout feature/ClaimsNeedToBeRemoved-33
+D       backend/Hello/Hello.Java
+branch 'feature/ClaimsNeedToBeRemoved-33' set up to track 'origin/feature/ClaimsNeedToBeRemoved-33'.
+Switched to a new branch 'feature/ClaimsNeedToBeRemoved-33'
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (feature/ClaimsNeedToBeRemoved-33)
+$ git status
+On branch feature/ClaimsNeedToBeRemoved-33
+Your branch is up to date with 'origin/feature/ClaimsNeedToBeRemoved-33'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    ../Hello/Hello.Java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (feature/ClaimsNeedToBeRemoved-33)
+$ git status
+On branch feature/ClaimsNeedToBeRemoved-33
+Your branch is up to date with 'origin/feature/ClaimsNeedToBeRemoved-33'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    ../Hello/Hello.Java
+        modified:   src/main/java/com/insurance/claim_service/controller/ClaimController.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (feature/ClaimsNeedToBeRemoved-33)
+$ git add .
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (feature/ClaimsNeedToBeRemoved-33)
+$ git status
+On branch feature/ClaimsNeedToBeRemoved-33
+Your branch is up to date with 'origin/feature/ClaimsNeedToBeRemoved-33'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   src/main/java/com/insurance/claim_service/controller/ClaimController.java
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    ../Hello/Hello.Java
+
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (feature/ClaimsNeedToBeRemoved-33)
+$ git commit -m 'Hello world Added'
+[feature/ClaimsNeedToBeRemoved-33 80c402c] Hello world Added
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (feature/ClaimsNeedToBeRemoved-33)
+$ git push
+Enumerating objects: 23, done.
+Counting objects: 100% (23/23), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (12/12), 831 bytes | 415.00 KiB/s, done.
+Total 12 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To https://github.com/mukeshkumarsh817/Insurance_app.git
+   63e5d56..80c402c  feature/ClaimsNeedToBeRemoved-33 -> feature/ClaimsNeedToBeRemoved-33
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (feature/ClaimsNeedToBeRemoved-33)
+$ git checkout main
+D       backend/Hello/Hello.Java
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (main)
+$ git pull
+Already up to date.
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (main)
+$ git merge feature/ClaimsNeedToBeRemoved-33
+Updating 63e5d56..80c402c
+Fast-forward
+ .../java/com/insurance/claim_service/controller/ClaimController.java    | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (main)
+$ git push
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/mukeshkumarsh817/Insurance_app.git
+   63e5d56..80c402c  main -> main
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (main)
+$ git checkout feature/ClaimsNeedToBeRemoved-33
+D       backend/Hello/Hello.Java
+Switched to branch 'feature/ClaimsNeedToBeRemoved-33'
+Your branch is up to date with 'origin/feature/ClaimsNeedToBeRemoved-33'.
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (feature/ClaimsNeedToBeRemoved-33)
+$ git status
+On branch feature/ClaimsNeedToBeRemoved-33
+Your branch is up to date with 'origin/feature/ClaimsNeedToBeRemoved-33'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    ../Hello/Hello.Java
+        modified:   src/main/java/com/insurance/claim_service/controller/ClaimController.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (feature/ClaimsNeedToBeRemoved-33)
+$ git status
+On branch feature/ClaimsNeedToBeRemoved-33
+Your branch is up to date with 'origin/feature/ClaimsNeedToBeRemoved-33'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    ../Hello/Hello.Java
+        modified:   src/main/java/com/insurance/claim_service/controller/ClaimController.java
+        modified:   src/main/java/com/insurance/claim_service/dto/ClaimRequestDTO.java
+        modified:   src/main/java/com/insurance/claim_service/service/ClaimService.java
+        modified:   src/main/java/com/insurance/claim_service/service/impl/ClaimServiceImpl.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (feature/ClaimsNeedToBeRemoved-33)
+$ git gui
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (feature/ClaimsNeedToBeRemoved-33)
+$ git add .
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (feature/ClaimsNeedToBeRemoved-33)
+$ git status
+On branch feature/ClaimsNeedToBeRemoved-33
+Your branch is up to date with 'origin/feature/ClaimsNeedToBeRemoved-33'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   src/main/java/com/insurance/claim_service/controller/ClaimController.java
+        modified:   src/main/java/com/insurance/claim_service/dto/ClaimRequestDTO.java
+        modified:   src/main/java/com/insurance/claim_service/service/ClaimService.java
+        modified:   src/main/java/com/insurance/claim_service/service/impl/ClaimServiceImpl.java
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    ../Hello/Hello.Java
+
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (feature/ClaimsNeedToBeRemoved-33)
+$ git commit -m '4 Files Changes'
+[feature/ClaimsNeedToBeRemoved-33 f4cf361] 4 Files Changes
+ 4 files changed, 6 insertions(+), 1 deletion(-)
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (feature/ClaimsNeedToBeRemoved-33)
+$ git push
+Enumerating objects: 35, done.
+Counting objects: 100% (35/35), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (18/18), 1.31 KiB | 672.00 KiB/s, done.
+Total 18 (delta 7), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (7/7), completed with 7 local objects.
+To https://github.com/mukeshkumarsh817/Insurance_app.git
+   80c402c..f4cf361  feature/ClaimsNeedToBeRemoved-33 -> feature/ClaimsNeedToBeRemoved-33
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (feature/ClaimsNeedToBeRemoved-33)
+$ git checkout main
+D       backend/Hello/Hello.Java
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (main)
+$ git pull
+Already up to date.
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (main)
+$ git merge feature/ClaimsNeedToBeRemoved-33
+Updating 80c402c..f4cf361
+Fast-forward
+ .../java/com/insurance/claim_service/controller/ClaimController.java    | 2 +-
+ .../src/main/java/com/insurance/claim_service/dto/ClaimRequestDTO.java  | 2 ++
+ .../src/main/java/com/insurance/claim_service/service/ClaimService.java | 2 ++
+ .../java/com/insurance/claim_service/service/impl/ClaimServiceImpl.java | 1 +
+ 4 files changed, 6 insertions(+), 1 deletion(-)
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (main)
+$ git push
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/mukeshkumarsh817/Insurance_app.git
+   80c402c..f4cf361  main -> main
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (main)
+$ git checkout feature/ClaimsNeedToBeRemoved-33
+D       backend/Hello/Hello.Java
+Switched to branch 'feature/ClaimsNeedToBeRemoved-33'
+Your branch is up to date with 'origin/feature/ClaimsNeedToBeRemoved-33'.
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (feature/ClaimsNeedToBeRemoved-33)
+$ git status
+On branch feature/ClaimsNeedToBeRemoved-33
+Your branch is up to date with 'origin/feature/ClaimsNeedToBeRemoved-33'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    ../Hello/Hello.Java
+        modified:   src/main/java/com/insurance/claim_service/controller/ClaimController.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (feature/ClaimsNeedToBeRemoved-33)
+$ git add .
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (feature/ClaimsNeedToBeRemoved-33)
+$ git commit -m 'New Change'
+[feature/ClaimsNeedToBeRemoved-33 cb00b7e] New Change
+ 1 file changed, 1 insertion(+)
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (feature/ClaimsNeedToBeRemoved-33)
+$ git push
+Enumerating objects: 23, done.
+Counting objects: 100% (23/23), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (12/12), 792 bytes | 792.00 KiB/s, done.
+Total 12 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To https://github.com/mukeshkumarsh817/Insurance_app.git
+   f4cf361..cb00b7e  feature/ClaimsNeedToBeRemoved-33 -> feature/ClaimsNeedToBeRemoved-33
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (feature/ClaimsNeedToBeRemoved-33)
+$ git checkout main
+D       backend/Hello/Hello.Java
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (main)
+$ git checkout mkshbranch
+error: pathspec 'mkshbranch' did not match any file(s) known to git
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (main)
+$ git fetch
+From https://github.com/mukeshkumarsh817/Insurance_app
+ * [new branch]      mkshbranch -> origin/mkshbranch
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (main)
+$ git checkout mkshbranch
+D       backend/Hello/Hello.Java
+branch 'mkshbranch' set up to track 'origin/mkshbranch'.
+Switched to a new branch 'mkshbranch'
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (mkshbranch)
+$ git status
+On branch mkshbranch
+Your branch is up to date with 'origin/mkshbranch'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    ../Hello/Hello.Java
+        modified:   src/main/java/com/insurance/claim_service/controller/ClaimController.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (mkshbranch)
+$ git commite -m "mksh added"
+git: 'commite' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (mkshbranch)
+$ git commit -m "mksh added"
+On branch mkshbranch
+Your branch is up to date with 'origin/mkshbranch'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    ../Hello/Hello.Java
+        modified:   src/main/java/com/insurance/claim_service/controller/ClaimController.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (mkshbranch)
+$ git add .
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (mkshbranch)
+$ git commit -m "mksh added1"
+[mkshbranch 378fe50] mksh added1
+ 1 file changed, 1 insertion(+)
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (mkshbranch)
+$ git push
+Enumerating objects: 23, done.
+Counting objects: 100% (23/23), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (12/12), 796 bytes | 398.00 KiB/s, done.
+Total 12 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To https://github.com/mukeshkumarsh817/Insurance_app.git
+   f4cf361..378fe50  mkshbranch -> mkshbranch
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (mkshbranch)
+$ git pull master
+fatal: 'master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+HP@Sharma MINGW64 /e/ins_ab/Insurance_app/backend/claim-service (mkshbranch)
+$
