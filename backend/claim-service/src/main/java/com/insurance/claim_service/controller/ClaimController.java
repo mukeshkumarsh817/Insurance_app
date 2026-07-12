@@ -11,7 +11,8 @@ import com.insurance.claim_service.dto.ClaimResponseDTO;
 import com.insurance.claim_service.service.ClaimService;
 
 import jakarta.validation.Valid;
-
+//import jakarta.validation.Valid;
+//System.out.println("mksh");
 @RestController
 @RequestMapping("/api/claims")
 public class ClaimController {
@@ -26,8 +27,7 @@ public class ClaimController {
     @PostMapping
     public ResponseEntity<ClaimResponseDTO> addClaim(
             @Valid @RequestBody ClaimRequestDTO request) {
-        //System.out.println("Hello World");
-        //System.out.println("Hello mksh1");
+        
         ClaimResponseDTO response = claimService.addClaim(request);
 
         return new ResponseEntity<>(response, HttpStatus.CREATED);
@@ -36,7 +36,7 @@ public class ClaimController {
     // Get All Claims
     @GetMapping
     public ResponseEntity<List<ClaimResponseDTO>> getAllClaims() {
-        //System.out.println("Hello Rupesh");
+       
         return ResponseEntity.ok(claimService.getAllClaims());
     }
 
